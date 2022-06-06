@@ -6,12 +6,14 @@ import Homepage from "./pages/Homepage";
 import Recipes from "./pages/Recipes";
 import RecipeDetail from "./pages/RecipeDetail";
 import Login from "./pages/Login";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path="*" element={<NotFound />} />
           <Route path="login" exact element={<Login />} />
           <Route path="/" exact element={<Layout />}>
             <Route path="" element={<Homepage pagetitle="" />} />
