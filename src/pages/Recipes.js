@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import {  useSearchParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import { apiAccessPoint } from "../services/RecipeClient";
@@ -13,8 +13,10 @@ function Recipes() {
   const [hasMore, setHasMore] = useState(true);
   const [searchKey, setSearchKey] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  let [searchParams, setSearchParams] = useSearchParams();
 
-  let { search } = useParams();
+  let search = searchParams.get("search");
+
   if (search == null) {
     search = "fresh+picks";
   }
