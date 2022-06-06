@@ -1,0 +1,13 @@
+{ 
+    "admin" : {
+        "password" : "123",
+        "role" :["admin","user"]
+
+    },
+    "soumya" : {
+        "password" : "123",
+        "role" :["user"]
+
+    }
+
+}
