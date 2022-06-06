@@ -6,7 +6,6 @@ function Search() {
   const [search, setSearch] = useState("");
   let [searchParams, setSearchParams] = useSearchParams();
   let searchKey = searchParams.get("search");
-  console.log(searchKey + " " + search);
 
   const navigate = useNavigate();
   const handleOnClick = () => {
