@@ -31,7 +31,6 @@ function Recipes() {
     await apiAccessPoint
       .get(url)
       .then((response) => {
-        console.log(response.data.hits);
         if(val){
           setRecipe([...response.data.hits]);
         } else {
